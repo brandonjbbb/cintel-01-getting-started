@@ -1,5 +1,5 @@
 """
-pipeline_brandon.py - Project script (example).
+pipeline_brandon.py
 
 Author: Brandon Jean
 Date: 2026-03-15
@@ -29,6 +29,7 @@ LOG: logging.Logger = get_logger("P1", level="DEBUG")
 
 ROOT_DIR: Path = Path.cwd()
 DOCS_DIR: Path = ROOT_DIR / "docs"
+LOG_FILE: Path = ROOT_DIR / "project.log"
 
 # === DEFINE THE MAIN FUNCTION ===
 
@@ -47,6 +48,7 @@ def main() -> None:
 
     log_path(LOG, "ROOT_DIR", ROOT_DIR)
     log_path(LOG, "DOCS_DIR", DOCS_DIR)
+    log_path(LOG, "LOG_FILE", LOG_FILE)
 
     LOG.info("========================")
     LOG.info("Pipeline executed successfully!")
